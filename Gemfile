@@ -12,10 +12,15 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
-
-group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-end
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'sidekiq'
+gem 'config'
+gem 'devise'
+gem 'premailer-rails'
+gem 'semantic-ui-sass'
+gem 'rails-ujs'
+gem 'jquery-rails'
+gem 'devise-semantified'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
@@ -30,19 +35,11 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem 'sidekiq'
-gem 'config'
-gem 'devise'
-gem 'premailer-rails'
-gem 'semantic-ui-sass'
-gem 'rails-ujs'
-gem 'jquery-rails'
 group :development, :test do
   gem 'dotenv-rails'
   gem 'faker'
   gem 'pry-rails'
   gem 'rspec-rails', '~> 3.7'
   gem 'pry-byebug'
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
